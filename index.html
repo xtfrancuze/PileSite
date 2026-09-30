@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Описание вашей страницы для поисковых систем">
+    <title>Документ</title>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+<body>
+    <!-- Бургер -->
+    <div class="burger-menu">
+        <a href="/">Главная</a>
+        <a href="/about/">О нас</a>
+        <a href="/project/">Проекты</a>
+        <a href="/contact/">Контакты</a>
+    </div>
+    <!-- Вверхняя навигация -->
+    <header>
+        <div class="header_wrapper">
+            <a href="/"><img src="logo/1782399446998-019eff48-21a1-7d73-a7c0-31a56ece77b7.png" alt="logo" class="logo"></a>
+            <nav class="header-nav__link" id="navigationLinkes">
+                <a href="/">Услуги</a>
+                <a href="/about/">О нас</a>
+                <a href="/project/">Проекты</a>
+                <a href="/contact/">Контакты</a>
+            </nav>
+            <button class="callback_order_header">REQUEST A QUOTE</button>
+        </div>
+    </header>
+    <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="preloader">
+    <div class="loader"></div>
+    </div>
+    
+    <div id="app">
+    <!--Приветственная секция -->
+    <section class="hero_section">
+        <video src="trailer.mp4" muted loop></video>
+        <div class="hero_content_wrapper">
+        <h2 class="hero_text">ФУНДАМЕНТ НА ЖЕЛЕЗНОБЕТОННЫХ СВАЯХ ПОД КЛЮЧ</h2>
+        <h3 class="under_hero">Сваи от 3-х до 7-ми метров.</h3>      
+        <p class="list_title"></p>
+        <ul class="list_ul">
+            <li>Геотехнические услуги</li>
+            <li>Основополагающий стоимостной инжиниринг</li>
+            <li>Строительный подрядчик</li>
+        </ul>
+        </div>
+        <button class="callback_order_hero">Расс8читать смету</button>
+    </section>
+    <!-- О нас -->
+    <section class="about_us">
+        <h1 class="text_under_aboutUs animate animate-to-up">Что вы можете ожидать от наших услуг по забивке свай и подрядных работ</h1>
+        <div class="grid_aboutUs">
+            <div class="section_about animate animate-left-part">
+                <img src="icons/handshake_edited.avif" alt="">
+                <h3>Профессиональное обслуживание</h3>
+                <p>Наша цель – построить долгосрочные отношения с клиентами на основе честности, оптимизации затрат и качественного обслуживания.</p>
+            </div>
+            <div class="section_about animate animate-to-up">
+                <img src="icons/labour_edited.avif" alt="">
+                <h3>Квалифицированная команда и оборудование</h3>
+                <p>Наши бригады высококвалифицированы и оснащены самым современным оборудованием и технологиями, что обеспечивает эффективную и точную работу на каждом проекте. </p>
+            </div>
+            <div class="section_about animate animate-right-part">
+                <img src="icons/calendar_edited.avif" alt="">
+                <h3>В срок и в рамках бюджета</h3>
+                <p>Мы гордимся тем, что реализуем проекты в срок и в рамках бюджета, гарантируя ваше удовлетворение на каждом этапе.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Производство свай -->
+    <section class="video_trailer_section">
+        <h3 class="animate animate-left-part">Узнайте, как мы строим фундамент и налаживаем отношения по всему северо-западному округу, обслуживая Вологодскую, Ярославскую, Московскую, Ленинградскую область.</h1>
+        <video src="trailer.mp4" class="animate animate-right-part"></video>
+    </section>
+    <!-- Карточки-редикт с секциями -->
+    <section class="services_section">
+        <h1 class="services_text animate animate-to-up">Сечение</h1>
+        <div class="collect_serveces">
+            <div class="card animate-card card-animate-left" data-pile="150x150">
+                <div class="card_img">
+                    <img src="photoSvai/150х150.png" alt="">
+                </div>
+
+                <div class="card_body">
+                    <h2>150x150</h2>
+                    <p>Лёгкие конструкции</p>
+                    <a href="/section/#liteConstruct"><i class="fa-regular fa-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="card animate-card card-animate-up" data-pile="200x200">
+                <div class="card_img">
+                    <img src="photoSvai/200х200.png" alt="">
+                </div>
+
+                <div class="card_body">
+                    <h2>200x200</h2>
+                    <p>Средние конструкции</p>
+                    <a href="/section/#midConstruct"><i class="fa-regular fa-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="card animate-card card-animate-right" data-pile="300x300">
+                <div class="card_img">
+                    <img src="photoSvai/300х300.png" alt="">
+                </div>
+
+                <div class="card_body">
+                    <h2>300x300</h2>
+                    <p>Тяжелые конструкции</p>
+                    <a href="/section/#hardConstruct"><i class="fa-regular fa-circle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Установки -->
+    <section class="installation_section">
+        <div class="container_installation">
+            <div class="installation_text animate animate-to-up">
+                <h1>Мы предлагаем один из самых современных в отрасли парков специализированных сваебойных установок для всех ваших потребностей в устройствах фундаментов.</h1>
+                <h2>Мы эксплуатируем один из самых обширных в Вологодской области парков специализированных буровых установок для забивки свай.</h2>
+            </div>
+            <div class="installation_image">
+                <img src="backgroundPhoto/vihr.png" alt="Установка вихрь" class="animate animate-left-part">
+                <img src="backgroundPhoto/stroymatik.jpg" alt="Установка стройматик" class="animate animate-right-part">
+            </div>
+        </div>
+    </section>
+    <!-- Сферы работы -->
+    <section class="sphere_section">
+        <h1 class="animated-text animated-title">Сферы, в которых мы специализируемся</h1>
+        <h3 class="animated-text animated-title">Компания <span>СвайСтройМастер</span> гордится тем, что работает на самых разных рынках, предлагая индивидуальные решения для проектов любого масштаба и сложности. Наша экспертиза охватывает следующие области:</h3>
+        <p class="animated-text animated-text-left">Малоэтажные дома и таунхаусы</p>
+        <p class="animated-text animated-text-center">Объекты индивидуального жилищного строительства</p>
+        <p class="animated-text animated-text-right">Придомовая инфраструктура</p>
+    </section>
+    <!-- Наши достижения -->
+    <section class="our_achievement">
+        <h2>Наши достижения говорят сами за себя</h2>
+        <div class="achievement_block">
+            <div class="cards animated-cards">
+                <h4><span class="cicle-animation-work"></span>+</h4>
+                <p>Выполненных работ</p>    
+            </div>
+            <div class="cards animated-cards">
+                <h4><span class="cicle-animation-client"></span>+</h4>
+                <p>Довольных клиентов</p>
+            </div>
+            <div class="cards animated-cards">
+                <h4><span class="cicle-animation-exp"></span>+</h4>
+                <p>Многолетний опыт</p>
+            </div>
+        </div>
+    </section>
+    <!-- Карусель отзывов -->
+    <section class="reviews_section splide">
+        <h1>Что говорят наши клиенты</h1>
+        <div class="splide__arrows">
+          <button class="splide__arrow splide__arrow--prev"><</button>
+          <button class="splide__arrow splide__arrow--next">></button>
+        </div>
+        <div class="carousel-window splide__track">
+        <ul class="block_reviews splide__list">
+        </ul>
+    </div>
+    </section>
+    <div class="block_btn_review">
+        <button class="put_review">Оставьте нам отзыв</button>
+    </div>
+    <!-- Информация о подрячках -->
+    <section class="contractor_section">
+        <h1>Упрощенная процедура заключения строительных контрактов для генеральных подрядчиков</h1>
+        <p>Компания <span>СвайСтройМастер</span> переосмысливает понятие субподряда для генеральных подрядчиков, предлагая <span>полный спектр собственных услуг</span>. Представьте себе, насколько проще управление проектом, когда профессионализм на строительной площадке, точность забивки свай и опыт работы с бетоном обеспечиваются одним <span>надежным партнером</span>. Мы ー ваш надежный партнер, готовый справиться со всеми <span>многогранными аспектами</span> вашего строительного проекта.</p>
+    </section>
+    <!-- Обратная связь -->
+    <div class="callback_bottom">
+        <h4>Есть вопрос? Нужен расчет стоимости? Позвоните нам.</h4>
+    </div>
+    </div>
+    <!-- Подвал -->
+    <footer>
+        <div class="left_part">
+            <h2>Свяжитесь с подрядчиками из СвайСтройМастер</h2>
+            <p>Откройте для себя профессиональные решения в сфере свайных фундаментов с компанией СвайСтройМастер, вашими партнерами в построении более сильного будущего. Как специализированная сваебойная компания, мы предоставляем экспертные услуги на Северо-Западе и в Центре России, работая в следующих регионах: Вологодская, Ярославская, Московская, Ленинградская области.</p>
+        </div>
+        
+        <div class="right_part">
+            <img src="logo/1782399446998-019eff48-21a1-7d73-a7c0-31a56ece77b7.png" alt="Логотип компании СвайСтройМастер">
+            
+            <address>
+                <p>Контакт: <a href="tel:+79216015424">+7 (921) 601-54-24</a></p>
+                <p>Электронная почта: <a href="mailto:89216015424@yandex.ru">89216015424@yandex.ru</a></p>
+                <div class="icons_footer">
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-vk"></i>
+                <i class="fa-brands fa-telegram"></i>
+                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-solid fa-phone"></i>
+                </div>
+            </address>
+        </div>
+    </footer>
+
+
+    <script src="/script.js"></script>
+    <!-- <script>
+        let galleryLightbox = null;
+        const burger = document.querySelector('.burger');
+        const burgerMenu = document.querySelector('.burger-menu');
+
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('open');     
+            burgerMenu.classList.toggle('open');
+        });
+
+        async function loadPage(url) {
+            try {
+                let fetchUrl = url;
+                if (fetchUrl.endsWith('/')) {
+                    fetchUrl += 'index.html';
+                }
+                
+                const response = await fetch(fetchUrl);
+                if (!response.ok) throw new Error("Файл не найден!");
+                
+                const htmlText = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(htmlText, 'text/html');
+
+                const content = doc.getElementById('app').innerHTML;
+                const liveApp = document.getElementById('app');
+                liveApp.innerHTML = '';
+                liveApp.insertAdjacentHTML('afterbegin', content);
+
+                document.title = doc.title;
+                initSlider();
+                initClasslistButton();
+                initGallery();
+                compileAnimations();
+            } catch (err) {
+                console.error(err.message);
+            }
+        }
+        
+        function initClasslistButton() {
+            const navigationLink = document.getElementById('navigationLinkes');
+            const linkes = navigationLink.querySelectorAll('a');
+            const path = document.location.pathname;
+            linkes.forEach((link) => {
+                if (link.pathname === path) {
+                    link.classList.add('active_btn');
+                } else {
+                    link.classList.remove('active_btn');
+                }
+            })
+        };
+
+        async function initGallery() {
+            const gallery = document.getElementById('gallery');
+            if (!gallery) return;
+
+            if (galleryLightbox) {
+                galleryLightbox.destroy();
+                galleryLightbox = null;
+            }
+            try {
+            const { default: PhotoSwipeLightbox } = await import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe-lightbox.esm.min.js');
+            const lightbox = new PhotoSwipeLightbox({
+            gallery: '#gallery',
+            children: 'a',
+            pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.esm.min.js'),
+            showHideAnimationType: 'zoom',
+            showAnimationDuration: 300,
+            hideAnimationDuration: 300,
+            bgOpacity: 0.85, 
+            maxSpreadZoom: 4, 
+            closeTitle: 'Закрыть окно',
+            zoomTitle: 'Увеличить',
+            arrowPrevTitle: 'Предыдущий слайд',
+            arrowNextTitle: 'Следующий слайд'
+            });
+            lightbox.init();
+        } catch (err) {
+            console.error(err.message)
+        }
+    }
+
+        document.addEventListener('click', (e) => {
+            const link = e.target.closest('a');
+            if (!link || link.origin !== window.location.origin) return;
+            
+            if (link.closest('#gallery') || link.closest('.project-gallery')) {
+                e.preventDefault();
+                return;
+            }   
+                e.preventDefault();
+                const url = link.href;
+                window.history.pushState({}, '', url);
+                loadPage(url);
+        });
+
+        window.addEventListener('popstate', () => {
+            loadPage(window.location.href);
+        })
+
+        function getURL() {
+            const path = window.location.pathname.split('/').filter(Boolean);
+            const lastSegment = path.pop() || '';
+            return lastSegment;
+        }
+        getURL();
+
+function setReward(names, rewards) {
+    const colors = [
+        "#AA47BD", "#7B1FA2", "#77919D", "#455A65", "#EC417A",
+        "#C1175C", "#5D6AC0", "#0388D2", "#00579B", "#0098A7",
+        "#00897B", "#004D40", "#68A039", "#34691E", "#8C6E63",
+        "#5D4138", "#7D57C1", "#512DA7", "#EF6C00", "#F6511E", "#BE360B"
+    ];
+
+    // Оставляем только одну правильную проверку на пустые строки
+    if (String(names).trim() === '' || String(rewards).trim() === '') return;
+
+    const listContainer = document.querySelector('.splide__list');
+    if (!listContainer) return;
+
+    // Создаем элементы
+    const blockReward = document.createElement('li');
+    blockReward.classList.add('blockReward', 'splide__slide');
+    
+    const collect = document.createElement('div');
+    collect.classList.add('collect');
+    
+    const photo = document.createElement('div');
+    photo.classList.add('photo');
+    
+    const name = document.createElement('h3');
+    name.classList.add('name');
+    name.textContent = String(names);
+    
+    const reward = document.createElement('p');
+    reward.classList.add('reward');
+
+    // Красим аватарку
+    function randomColor() {
+        const randomDigit = Math.floor(Math.random() * colors.length); // Исправлено на colors.length, чтобы не вылетало за пределы массива
+        photo.style.backgroundColor = colors[randomDigit];
+    }
+    randomColor();
+
+    // Наполняем текстом
+    if (String(rewards).length > 50) {
+        const more = document.createElement('p');
+        more.textContent = "Подробнее";
+        more.classList.add('more');
+        reward.append(String(rewards).slice(0, 55), more);
+
+        // Логика модалки
+        more.addEventListener('click', () => {
+            const modal = document.createElement('dialog');
+            modal.classList.add('modal');
+            document.body.appendChild(modal);
+
+            modal.addEventListener('close', () => {
+                modal.remove();
+            });
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) modal.close();
+            });
+
+            const avatar = document.createElement('div');
+            avatar.classList.add('photo');
+            avatar.style.backgroundColor = photo.style.backgroundColor;
+            avatar.textContent = names.at(0);
+
+            const nameUser = document.createElement('h3');
+            nameUser.classList.add('name');
+            nameUser.textContent = names;
+
+            const rewardUser = document.createElement('p');
+            rewardUser.classList.add('reward');
+            rewardUser.textContent = rewards;
+
+            modal.append(avatar, nameUser, rewardUser);
+            modal.showModal();
+        });
+    } else {
+        reward.textContent = String(rewards);
+    }
+
+    const firstLetter = names.split('').at(0);
+    photo.textContent = firstLetter;
+
+    collect.append(photo, name);
+    blockReward.append(collect, reward);
+    listContainer.appendChild(blockReward);
+}
+
+function initSlider() {
+    const splideElement = document.querySelector('.splide');
+    if (splideElement) {
+    setReward("Иван Иванов", "Отличная работа! Сделали всё быстро, качественно и уложились в бюджет. Рекомендую бригаду!");
+    setReward("Алексей Петров", "Все супер, спасибо за выполненный проект.");
+    setReward("Мария Сидорова", "Очень длинный отзыв, который должен аккуратно обрезаться троеточием, чтобы проверить как работает наша кастомная модалка на клике.");
+    setReward("Константин", "Качественные сваи, забивают на совесть.");
+    setReward("Елена", "Быстро ответили на заявку, приехали на следующий день.");
+
+    if (document.querySelectorAll('.blockReward').length > 0) {
+        new Splide('.splide', {
+            type       : 'loop',
+            perPage    : 4,
+            gap        : '20px',
+            pagination : true,
+            autoplay   : true,
+            interval   : 3000,
+            pauseOnHover: true,
+            padding    : {left: '20px', right: '20px'},
+            breakpoints: {
+                1250: { perPage: 3 },
+                768 : { perPage: 2 },
+                480 : { perPage: 1 }
+            }
+        }).mount();
+    }
+}
+};
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initSlider();
+            initGallery();
+            initClasslistButton();
+            compileAnimations();
+        })
+
+        function compileAnimations() {
+        const aboutSection = document.querySelectorAll('.animate');
+        const scrollOnObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(x => {
+                if (x.isIntersecting) {
+                    x.target.classList.add('visible');
+                    observer.unobserve(x.target);
+                }
+            })
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px',
+        });
+
+        aboutSection.forEach(el => {
+            scrollOnObserver.observe(el)
+        })
+
+        const cardSection = document.querySelectorAll('.animate-card');
+        const scrollOnObserverCard = new IntersectionObserver((entries, observer) => {
+            entries.forEach(x => {
+                if (x.isIntersecting) {
+                    x.target.classList.add('visible');
+                    observer.unobserve(x.target);
+                }
+            })
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px 50px 0px'
+        });
+
+        cardSection.forEach(el => {
+            scrollOnObserverCard.observe(el);
+        })
+
+        const textSection = document.querySelectorAll('.animated-text');
+
+        const scrollOnObserverText = new IntersectionObserver((entries, observer) => {
+            entries.forEach(x => {
+                if (x.isIntersecting) {
+                    x.target.classList.add('visible');
+                    observer.unobserve(x.target);
+                }
+            })
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px 25px 0px'
+        });
+
+        textSection.forEach(el => {
+            scrollOnObserverText.observe(el)
+        });
+
+        const achievSection = document.querySelector('.our_achievement');
+        const scrollOnObserverAchiv = new IntersectionObserver((entries, observer) => {
+            entries.forEach(x => {
+                if (x.isIntersecting) {
+                    cicleAnimations();
+                    const cards = x.target.querySelectorAll('.animated-cards');
+                    cards.forEach(card => card.classList.add('visible'));
+                    observer.unobserve(x.target);
+                }
+            })
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px 50px 0px'
+        });
+        scrollOnObserverAchiv.observe(achievSection);
+
+        function cicleAnimations() {
+            const cicleWork = () => {
+                const cicle = document.querySelector('.cicle-animation-work');
+                const target = 350;
+                let current = 0;
+
+                const timerAnim = setInterval(() => {
+                    current++;
+                    cicle.textContent = current;
+
+                    if (current >= target) {
+                        clearInterval(timerAnim)
+                    }
+                }, 5)
+            };
+
+            const cicleClient = () => {
+                const cicle = document.querySelector('.cicle-animation-client');
+                const target = 175;
+                let current = 0;
+
+                const timerAnim = setInterval(() => {
+                    current++;
+                    cicle.textContent = current;
+
+                    if (current >= target) {
+                        clearInterval(timerAnim)
+                    }
+                }, 10)
+            };
+
+            const cicleExp = () => {
+                const cicle = document.querySelector('.cicle-animation-exp');
+                const target = 5;
+                let current = 0;
+
+                const timerAnim = setInterval(() => {
+                    current++;
+                    cicle.textContent = current;
+
+                    if (current >= target) {
+                        clearInterval(timerAnim)
+                    }
+                }, 250)
+            }
+            cicleWork();
+            cicleClient();
+            cicleExp();
+        }        
+    }
+    </script> -->
+</body>
+</html>

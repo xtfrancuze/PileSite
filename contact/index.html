@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Описание вашей страницы для поисковых систем">
+    <title>Контакты</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+<body>
+    <div class="burger-menu">
+        <a href="/">Главная</a>
+        <a href="/about/">About Us</a>
+        <a href="/project/">Projects</a>
+        <a href="/contact/">Contact Us</a>
+    </div>
+    <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="preloader">
+    <div class="loader"></div>
+    </div>
+
+    <header>
+        <div class="header_wrapper">
+            <a href="/"><img src="logo/1782399446998-019eff48-21a1-7d73-a7c0-31a56ece77b7.png" alt="logo" class="logo"></a>
+            <nav class="header-nav__link" id="navigationLinkes">
+                <a href="/">Услуги</a>
+                <a href="/about/">О нас</a>
+                <a href="/project/">Проекты</a>
+                <a href="/contact/">Контакты</a>
+            </nav>
+            <button class="callback_order_header">REQUEST A QUOTE</button>
+        </div>
+    </header>
+
+    <div id="app">
+        <main class="contactus-block">
+            <div class="contactus-hero__leftpart">
+                <h2>Наши контакты</h2>
+                <ul>
+                    <li>Office: <span>000-000</span></li>
+                    <li>Fax: <span>000-000</span></li>
+                    <li>Email: <span>info@gmail.com</span></li>
+                </ul>
+                <p>Adress:</p>
+            </div>
+            <div class="contactus-hero__rightpart">
+                <input id="inputName" type="text" placeholder="Имя" oninput="this.value = this.value.replace(/[^А-Яа-яЁёA-Za-z\s]/g, '')">
+                <input id="inputEmail" type="email" placeholder="Email" required>
+                <input id="inputNumber" type="text" placeholder="Номер телефона" value="+7" oninput="this.value = this.value.replace(/[^\d+]/g, '')">
+                <textarea name="" id="messageUser" placeholder="Введите ваше сообщение здесь.."></textarea>
+                <input type="text" name="_honey" style="display:none" tabindex="-1">
+                <button class="contactus-button__submit">Отправить</button>
+            </div>
+        </main>
+        
+        <div class="callback_bottom">
+            <h4>Есть вопрос? Нужен расчет стоимости? Позвоните нам.</h4>
+        </div>
+    </div>
+    <footer>
+        <div class="left_part">
+            <h2>Свяжитесь с подрядчиками из СвайСтройМастер</h2>
+            <p>Откройте для себя профессиональные решения в сфере свайных фундаментов с компанией СвайСтройМастер, вашими партнерами в построении более сильного будущего. Как специализированная сваебойная компания, мы предоставляем экспертные услуги на Северо-Западе и в Центре России, работая в следующих регионах: Вологодская, Ярославская, Московская, Ленинградская области.</p>
+        </div>
+        <div class="right_part">
+            <img src="logo/1782399446998-019eff48-21a1-7d73-a7c0-31a56ece77b7.png" alt="Логотип компании СвайСтройМастер">
+            
+            <address>
+                <p>Контакт: <a href="tel:+79216015424">+7 (921) 601-54-24</a></p>
+                <p>Электронная почта: <a href="mailto:89216015424@yandex.ru">89216015424@yandex.ru</a></p>
+                <div class="icons_footer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <i class="fa-brands fa-vk"></i>
+                    <i class="fa-brands fa-telegram"></i>
+                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+            </address>
+        </div>
+    </footer>
+    <script src="/script.js"></script>
+</body>
+</html>
