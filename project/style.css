@@ -298,25 +298,24 @@
 
             .project-gallery {
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                /* По умолчанию на широких экранах — 4 колонки */
+                grid-template-columns: repeat(4, 1fr);
                 gap: 20px; 
                 padding: 20px;
                 max-width: 1200px;
+                width: 100%;
                 margin: 0 auto;
+                box-sizing: border-box; /* Важно: чтобы padding не раздувал ширину */
             }
 
-        
             .project-gallery a {
+                display: block;
                 overflow: hidden;
                 border-radius: 8px; 
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-                transition: transform 0.2s ease, box-shadow 0.2s ease;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
                 aspect-ratio: 4 / 3;
-            }
-
-            .project-gallery a:hover {
-                transform: translateY(-4px); 
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                width: 100%;
+                min-width: 0; /* Предотвращает распирание grid-ячейки содержимым */
             }
 
             .project-gallery img {
@@ -327,8 +326,44 @@
                 transition: transform 0.3s ease;
             }
 
-            .project-gallery a:hover img {
-                transform: scale(1.05);
+            /* Ховер только для мыши */
+            @media (hover: hover) and (pointer: fine) {
+                .project-gallery a:hover {
+                    transform: translateY(-4px); 
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                    transition: transform 0.25s ease, box-shadow 0.25s ease;
+                }
+
+                .project-gallery a:hover img {
+                    transform: scale(1.05);
+                }
+            }
+
+            /* Ноутбуки и планшеты в альбомной ориентации (до 1100px) — 3 колонки (как раз покроет 824px) */
+            @media (max-width: 1100px) {
+                .project-gallery {
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 16px;
+                    padding: 16px;
+                }
+            }
+
+            /* Вертикальные планшеты и большие телефоны (до 768px) — 2 колонки */
+            @media (max-width: 768px) {
+                .project-gallery {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 14px;
+                    padding: 14px;
+                }
+            }
+
+            /* Смартфоны (до 480px) — 1 колонка */
+            @media (max-width: 480px) {
+                .project-gallery {
+                    grid-template-columns: 1fr;
+                    gap: 12px;
+                    padding: 12px;
+                }
             }
 
             .callback_bottom {
