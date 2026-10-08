@@ -43,31 +43,32 @@
                 <a href="/project/">Проекты</a>
                 <a href="/contact/">Контакты</a>
             </nav>
-            <button class="callback_order_header">REQUEST A QUOTE</button>
+            <button class="callback_order_header">ЗАКАЗАТЬ ЗВОНОК</button>
         </div>
     </header>
 
     <div id="app">
         <main class="contactus-block">
-            <div class="contactus-hero__leftpart">
-                <h2>Наши контакты</h2>
-                <ul>
-                    <li>Office: <span>000-000</span></li>
-                    <li>Fax: <span>000-000</span></li>
-                    <li>Email: <span>info@gmail.com</span></li>
-                </ul>
-                <p>Adress:</p>
-            </div>
-            <div class="contactus-hero__rightpart">
-                <input id="inputName" type="text" placeholder="Имя" oninput="this.value = this.value.replace(/[^А-Яа-яЁёA-Za-z\s]/g, '')">
-                <input id="inputEmail" type="email" placeholder="Email" required>
-                <input id="inputNumber" type="text" placeholder="Номер телефона" value="+7" oninput="this.value = this.value.replace(/[^\d+]/g, '')">
-                <textarea name="" id="messageUser" placeholder="Введите ваше сообщение здесь.."></textarea>
-                <input type="text" name="_honey" style="display:none" tabindex="-1">
-                <button class="contactus-button__submit">Отправить</button>
+            <div class="contactus-card">
+                <div class="contactus-info">
+                    <h2>Наши контакты</h2>
+                    <ul>
+                        <li>Офис: <span>000-000</span></li>
+                        <li>Email: <span>info@gmail.com</span></li>
+                    </ul>
+                    <p>Адрес:</p>
+                </div>
+
+                <form class="contactus-form">
+                    <input id="inputName" type="text" placeholder="Имя" oninput="this.value = this.value.replace(/[^А-Яа-яЁёA-Za-z\s]/g, '')">
+                    <input id="inputEmail" type="email" placeholder="Email" required>
+                    <input id="inputNumber" type="text" placeholder="+7 (___) ___-__-__" value="" oninput="this.value = this.value.replace(/[^\d+]/g, '')">
+                    <textarea id="messageUser" placeholder="Введите ваше сообщение здесь.."></textarea>
+                    <input type="text" name="_honey" style="display:none" tabindex="-1">
+                    <button type="submit" class="contactus-button__submit">Отправить</button>
+                </form>
             </div>
         </main>
-        
         <div class="callback_bottom">
             <h4>Есть вопрос? Нужен расчет стоимости? Позвоните нам.</h4>
         </div>
@@ -88,7 +89,7 @@
                     <i class="fa-brands fa-vk"></i>
                     <i class="fa-brands fa-telegram"></i>
                     <i class="fa-solid fa-envelope"></i>
-                    <i class="fa-solid fa-phone"></i>
+                    <i class="fa-solid fa-square-phone"></i>
                 </div>
             </address>
         </div>

@@ -821,7 +821,7 @@
             color: #002E5D;
             font-weight: bold;
             font-size: clamp(1.1rem, 3vw, 1.37rem);
-            width: 50%;
+            width: 90%;
             line-height: 35px;
         }
 
@@ -966,6 +966,7 @@
                 background-color: #ffffff;
                 padding: 15px;
                 box-sizing: border-box;
+                border-radius: 15px;
             }
 
             @media (max-width: 1240px) {
@@ -980,11 +981,39 @@
             }
 
             .blockReward {
-                background-color: #f8f7f7;
+                background-color: #f0eded;
                 padding: 15px;
                 height: auto;
                 box-sizing: border-box;
                 border-radius: 7%;
+                background: #ffffff;
+                position: relative;
+                background: linear-gradient(135deg, #f6f6f7, #efeff1);
+                box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+                overflow: hidden;
+            }
+
+            .blockReward::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -150%;
+                width: 50%;
+                height: 100%;
+                background: linear-gradient(
+                    90deg, 
+                    rgba(0, 0, 0, 0) 0%, 
+                    rgba(0, 0, 0, 0.04) 40%, 
+                    rgba(0, 0, 0, 0.08) 50%, 
+                    rgba(0, 0, 0, 0.04) 60%, 
+                    rgba(0, 0, 0, 0) 100%
+                );
+                transform: skew(-25deg);
+            }
+
+            .blockReward:hover::before {
+                left: 150%;
+                transition: left 2s ease-in-out;
             }
 
             .reviews_section .splide__arrow {
@@ -1417,70 +1446,76 @@
 
 		    .contactus-block {
                 display: flex;
-                justify-content: space-between;
+                justify-content: flex-end;
+                align-items: center;      
                 width: 100%;
-                margin: 0 auto;
-            }
-
-            .contactus-hero__leftpart {
-                flex: 1;
-                max-width: 50%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                background-image: url(pictures/Gemini_Generated_Image_tlscvrtlscvrtlsc.png);
+                min-height: 100vh;
+                box-sizing: border-box;
+                padding: 40px;
+                background-image: url(/contact/pictures/contact_background.jpg);
+                background-size: cover;
                 background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover; 
-                padding: 100px;
-                color: white;
-                font-size: 1.5rem;
             }
 
-            .contactus-hero__rightpart {
+            .contactus-card {
                 display: flex;
                 flex-direction: column;
                 gap: 30px;
-                background-color: #001f54;
-                padding: 100px;
-                flex: 1;
-                max-width: 50%;
-                align-items: center;
+                width: 100%;
+                max-width: 450px;   
+                padding: 40px;
                 box-sizing: border-box;
+                border-radius: 16px;
+                background-color: #002E5D;
+                color: #E9A52F;
+                margin-right: 5vw; 
             }
 
-            .contactus-hero__rightpart input, .contactus-hero__rightpart textarea {
-                padding: 10px;
-                border-radius: 10px;
+            .contactus-info h2 {
+                margin-top: 0;
+                margin-bottom: 12px;
+            }
+
+            .contactus-info ul {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 10px 0;
+            }
+
+            .contactus-info li {
+                margin-bottom: 6px;
+            }
+
+            .contactus-form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+            }
+
+            .contactus-form input,
+            .contactus-form textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
                 font-family: inherit;
-                width: 50%;
+                font-size: 1rem;
                 box-sizing: border-box;
             }
 
-            .error-border {
-                border: 2px solid red;
+            .contactus-form textarea {
+                resize: vertical;
+                min-height: 100px;
             }
-            
+
             .contactus-button__submit {
-                padding: 7px;
-                border-radius: 7px;
-                border: 2px solid #E9A52F;
-                font-weight: bold;
-                background-color: #fff;
-                color: #002E5D;
-            }
-
-            .contactus-button__submit:hover {
-                color: #002E5D;
-                background-color: #E9A52F;
-                border: 2px solid #fff;
-            }
-
-            .contactus-button__submit:disabled {
-                background-color: #e0e0e0;
-                color: #a0a0a0;
-                border-color: #ccc;
-                cursor: not-allowed;
+                padding: 12px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 1rem;
+                font-weight: 600;
             }
 
             @media (max-width: 768px) {
