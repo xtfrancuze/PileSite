@@ -17,6 +17,24 @@
             }
         });
 
+        document.querySelectorAll('a[href^="#"], a[href*="/#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                const targetId = href.substring(href.indexOf('#'));
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    e.preventDefault();
+                    setTimeout(() => {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 50); 
+                }
+            });
+        });
+
         async function loadPage(url) {
             try {
                 let fetchUrl = url;
@@ -24,7 +42,7 @@
                     fetchUrl += 'index.html';
                 }
 
-                /* const lazyPreload = document.querySelector('.preloader');  */
+                const lazyPreload = document.querySelector('.preloader'); 
                 
                 const response = await fetch(fetchUrl);
                 if (!response.ok) {
@@ -48,10 +66,10 @@
                 const content = doc.getElementById('app').innerHTML;
                 const liveApp = document.getElementById('app');
                 liveApp.innerHTML = '';
-                /* if (lazyPreload) {
+                if (lazyPreload) {
                     lazyPreload.style.display = 'flex';
                     lazyPreload.style.transition = 'display 0.3s ease';
-                } */
+                }
                 liveApp.insertAdjacentHTML('afterbegin', content);
                 document.title = doc.title;
                 initSlider();
@@ -60,9 +78,9 @@
                 compileAnimations();
                 initValidate();
                 callculateOrder();
-                /* await delay(2000); */
-                /* lazyPreload.style.display = 'none';
-                lazyPreload.style.transition = 'display 0.3s ease'; */
+                await delay(2000);
+                lazyPreload.style.display = 'none';
+                lazyPreload.style.transition = 'display 0.3s ease';
             } catch (err) {
                 console.error(err.message);
             }
@@ -150,13 +168,11 @@ function setReward(names, rewards) {
         "#5D4138", "#7D57C1", "#512DA7", "#EF6C00", "#F6511E", "#BE360B"
     ];
 
-    // Оставляем только одну правильную проверку на пустые строки
     if (String(names).trim() === '' || String(rewards).trim() === '') return;
 
     const listContainer = document.querySelector('.splide__list');
     if (!listContainer) return;
 
-    // Создаем элементы
     const blockReward = document.createElement('li');
     blockReward.classList.add('blockReward', 'splide__slide');
     
@@ -173,14 +189,12 @@ function setReward(names, rewards) {
     const reward = document.createElement('p');
     reward.classList.add('reward');
 
-    // Красим аватарку
     function randomColor() {
         const randomDigit = Math.floor(Math.random() * colors.length); // Исправлено на colors.length, чтобы не вылетало за пределы массива
         photo.style.backgroundColor = colors[randomDigit];
     }
     randomColor();
 
-    // Наполняем текстом
     if (String(rewards).length > 50) {
         const more = document.createElement('p');
         more.textContent = "Подробнее";
@@ -231,11 +245,11 @@ function setReward(names, rewards) {
 function initSlider() {
     const splideElement = document.querySelector('.splide');
     if (splideElement) {
-    setReward("Иван Иванов", "Отличная работа! Сделали всё быстро, качественно и уложились в бюджет. Рекомендую бригаду!");
+    setReward("Валентин", "Установка жб свай. Парни молодцы. Приехали вовремя за  270км, сами все разметили, все сделали быстро и четко. Однозначно рекомендую");
     setReward("Алексей Петров", "Все супер, спасибо за выполненный проект.");
-    setReward("Мария Сидорова", "Очень длинный отзыв, который должен аккуратно обрезаться троеточием, чтобы проверить как работает наша кастомная модалка на клике.");
+    setReward("Светлана Прусова", "Спасибо большое за работу. Все чётко и быстро. Без лишних вопросов. Приехали и забили на следующей день после встречи. Всегда были на связи. Однозначно рекомендую эту компанию.");
     setReward("Константин", "Качественные сваи, забивают на совесть.");
-    setReward("Елена", "Быстро ответили на заявку, приехали на следующий день.");
+    setReward("Вадим", "Работа выполнена в полном объеме, качественно и быстро. Особая благодарность Виктору за организацию процесса работы. Однозначно рекомендую.");
 
     if (document.querySelectorAll('.blockReward').length > 0) {
         new Splide('.splide', {
