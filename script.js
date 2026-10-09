@@ -210,7 +210,17 @@ function setReward(names, rewards) {
                 modal.remove();
             });
             modal.addEventListener('click', (e) => {
-                if (e.target === modal) modal.close();
+                if (e.target === modal) {
+                    modal.close();
+                }
+            });
+
+            const buttonClose = document.createElement('button');
+            buttonClose.classList.add('close-btn');
+            buttonClose.textContent = `×`
+
+            buttonClose.addEventListener('click', () => {
+                modal.close();
             });
 
             const header = document.createElement('div');
@@ -231,7 +241,7 @@ function setReward(names, rewards) {
             rewardUser.classList.add('reward-modal');
             rewardUser.textContent = rewards;
 
-            modal.append(header, rewardUser);
+            modal.append(header, rewardUser, buttonClose);
             modal.showModal();
         });
     } else {
