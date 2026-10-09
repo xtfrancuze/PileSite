@@ -190,7 +190,7 @@ function setReward(names, rewards) {
     reward.classList.add('reward');
 
     function randomColor() {
-        const randomDigit = Math.floor(Math.random() * colors.length); // Исправлено на colors.length, чтобы не вылетало за пределы массива
+        const randomDigit = Math.floor(Math.random() * colors.length);
         photo.style.backgroundColor = colors[randomDigit];
     }
     randomColor();
@@ -201,7 +201,6 @@ function setReward(names, rewards) {
         more.classList.add('more');
         reward.append(String(rewards).slice(0, 55), more);
 
-        // Логика модалки
         more.addEventListener('click', () => {
             const modal = document.createElement('dialog');
             modal.classList.add('modal');
@@ -214,20 +213,25 @@ function setReward(names, rewards) {
                 if (e.target === modal) modal.close();
             });
 
+            const header = document.createElement('div');
+            header.classList.add('modal-header');
+
             const avatar = document.createElement('div');
             avatar.classList.add('photo');
             avatar.style.backgroundColor = photo.style.backgroundColor;
             avatar.textContent = names.at(0);
 
             const nameUser = document.createElement('h3');
-            nameUser.classList.add('name');
+            nameUser.classList.add('name-modal-reward');
             nameUser.textContent = names;
 
+            header.append(avatar, nameUser);
+
             const rewardUser = document.createElement('p');
-            rewardUser.classList.add('reward');
+            rewardUser.classList.add('reward-modal');
             rewardUser.textContent = rewards;
 
-            modal.append(avatar, nameUser, rewardUser);
+            modal.append(header, rewardUser);
             modal.showModal();
         });
     } else {
